@@ -47,12 +47,15 @@ namespace GalacticLib.Semantic {
                 Test = "test", Testing = "testing";
         }
 
+        int _Major;
         /// <summary> (Major).Minor.Patch-BuildType+Build </summary>
-        public int Major { get; set; }
+        public int Major { get => _Major; set => _Major = value < 0 ? 0 : value; }
+        int _Minor;
         /// <summary> Major.(Minor).Patch-BuildType+Build </summary>
-        public int Minor { get; set; }
+        public int Minor { get => _Minor; set => _Minor = value < 0 ? 0 : value; }
+        int _Patch;
         /// <summary> Major.Minor.(Patch)-BuildType+Build </summary>
-        public int Patch { get; set; }
+        public int Patch { get => _Patch; set => _Patch = value < 0 ? 0 : value; }
         /// <summary> Major.Minor.Patch-(BuildType)+Build </summary>
         public string? BuildType { get; set; }
         /// <summary> Major.Minor.Patch-BuildType+(Build) </summary>
