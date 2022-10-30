@@ -165,13 +165,13 @@ namespace GalacticLib.Semantic {
             => new(Major, Minor, Patch, 0);
 
         public override int GetHashCode() {
-            int hashCode
-                = Major.GetHashCode() + Minor.GetHashCode() + Patch.GetHashCode();
-            if (BuildType != null)
-                hashCode += BuildType.GetHashCode();
-            if (Build != null)
-                hashCode += Build.GetHashCode();
-            return hashCode;
+            HashCode code = new();
+            code.Add(Major);
+            code.Add(Minor);
+            code.Add(Patch);
+            code.Add(BuildType);
+            code.Add(Build);
+            return code.ToHashCode();
         }
         public override bool Equals(object? obj) {
             if (obj is not Version other) return false;
