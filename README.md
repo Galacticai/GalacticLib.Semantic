@@ -1,4 +1,4 @@
-## <a href="#"> <img height=32 src="https://img.shields.io/badge/GalacticLib-Math-white" /> </a>
+## <a href="#"> <img height=32 src="https://img.shields.io/badge/GalacticLib-Semantic-white" /> </a>
 
 
 > <a href="https://github.com/Galacticai/GalacticLib.Semantic/actions/runs/3354750276/jobs/5558514599" >
