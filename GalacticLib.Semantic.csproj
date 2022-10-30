@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>GalacticLib.Semantic</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <Title>GalacticLib (Semantic)</Title>
+	<Copyright>©2022 Galacticai</Copyright>
+    <PackageProjectUrl>https://Galacticai.github.io/GalacticLib</PackageProjectUrl>
+    <PackageRepositoryUrl>https://github.com/Galacticai/GalacticLib.Semantic</PackageRepositoryUrl>
+    <PackageTags>Galacticai;GalacticLib;Lib;Library;Semantic;</PackageTags>
+    <NeutralLanguage>en-001</NeutralLanguage>
+	<Authors>Galacticai</Authors>
+	<VersionPrefix>0.1.0.1</VersionPrefix>
+	<AssemblyVersion>0.1.0.1</AssemblyVersion>
+	<FileVersion>0.1.0.1</FileVersion>
+	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GalacticLib.Math" Version="0.2.1.1" />
+  </ItemGroup>
+
+</Project>
