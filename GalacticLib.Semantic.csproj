@@ -22,8 +22,4 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="GalacticLib.Math" Version="0.2.1.1" />
-  </ItemGroup>
-
 </Project>
