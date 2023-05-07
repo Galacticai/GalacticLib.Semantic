@@ -67,7 +67,9 @@ namespace GalacticLib.Semantic;
         /// <summary> Major.Minor.(Patch)-BuildType+Build </summary>
         public int Patch { get => _Patch; set => _Patch = value < 0 ? 0 : value; }
         /// <summary> Major.Minor.Patch-(BuildType)+Build </summary>
-        public string? BuildType { get; set; }
+    public string BuildType { get; set; }
+    /// <summary> Just a different label for <see cref="BuildType"/> </summary>
+    public string Prerelease { get => BuildType; set => BuildType = value; }
         /// <summary> Major.Minor.Patch-BuildType+(Build) </summary>
         public string? Build { get; set; }
 
