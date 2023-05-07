@@ -8,7 +8,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
     <Title>GalacticLib (Semantic)</Title>
-	<Copyright>©2022 Galacticai</Copyright>
+	<Copyright>©2022-2023 Galacticai</Copyright>
     <PackageProjectUrl>https://Galacticai.github.io/GalacticLib</PackageProjectUrl>
     <PackageRepositoryUrl>https://github.com/Galacticai/GalacticLib.Semantic</PackageRepositoryUrl>
     <PackageTags>Galacticai;GalacticLib;Lib;Library;Semantic;</PackageTags>
