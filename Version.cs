@@ -121,7 +121,7 @@ namespace GalacticLib.Semantic;
 
                     //? Make int for XYZ
                     if (IsXYZ()) {
-                        int.TryParse(part, out int partValue);
+                    int.TryParse(part, out int partValue); //!? no if, so it always sets a value or 0
                         property.SetValue(this, partValue);
                 } else property.SetValue(this, part); //? keep as {string?} for BuildType, Build
                 }
