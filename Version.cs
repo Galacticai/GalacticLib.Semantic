@@ -32,7 +32,7 @@ namespace GalacticLib.Semantic;
             /// <summary> X.Y.Z-BuildType+(Build) </summary> 
             public const string Build
                 = $@"?(?:\+{AlphanumericDashDot}+)?";
-            /// <summary> (X.Y.Z-BuildType+Build) </summary> 
+        /// <summary> X.Y.Z-BuildType+Build </summary>
             public const string Complete = XYZ + BuildType + Build;
         }
 
