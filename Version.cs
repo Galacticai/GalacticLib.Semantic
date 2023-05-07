@@ -74,29 +74,14 @@ namespace GalacticLib.Semantic;
 
         /// <summary> Semantic version matching the guidelines in semver.org </summary>
         public Version(
-                int major, int minor, int patch,
-                string? buildType, string? build) {
+            int major = 0, int minor = 0, int patch = 0,
+            string buildType = "", string build = "") {
             Major = major;
             Minor = minor;
             Patch = patch;
             BuildType = buildType;
             Build = build;
         }
-        /// <summary> Semantic version matching the guidelines in semver.org </summary>
-        public Version(int major, int minor, int patch, string? buildType)
-                : this(major, minor, patch, buildType, null) { }
-        /// <summary> Semantic version matching the guidelines in semver.org </summary>
-        public Version(int major, int minor, int patch)
-                : this(major, minor, patch, null, null) { }
-        /// <summary> Semantic version matching the guidelines in semver.org </summary>
-        public Version(int major, int minor)
-                : this(major, minor, 0, null, null) { }
-        /// <summary> Semantic version matching the guidelines in semver.org </summary>
-        public Version(int major)
-                : this(major, 0, 0, null, null) { }
-        /// <summary> Semantic version matching the guidelines in semver.org </summary>
-        public Version()
-                : this(0, 0, 0, null, null) { }
         /// <summary> Semantic version matching the guidelines in semver.org 
         /// <br/> From a <see cref="string"/> </summary>
         public Version(string versionString)
