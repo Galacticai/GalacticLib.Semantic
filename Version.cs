@@ -11,8 +11,9 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace GalacticLib.Semantic {
-    /// <summary> Semantic version matching the guidelines in semver.org </summary>
+namespace GalacticLib.Semantic;
+
+/// <summary> Semantic version matching the guidelines in <see href="https://semver.org"/> </summary>
     public class Version {
         /// <summary> Collection of version regex-related things </summary>
         public record VersionRegex {
