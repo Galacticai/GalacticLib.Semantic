@@ -91,6 +91,7 @@ namespace GalacticLib.Semantic;
         /// <br/> From a <see cref="string"/> </summary>
         public Version(string versionString)
                 : this(versionString, false) { }
+
         /// <summary> Semantic version matching the guidelines in semver.org 
         /// <br/> From a <see cref="string"/> </summary>
     public Version(string versionString, bool forceSemantic)
@@ -112,13 +113,11 @@ namespace GalacticLib.Semantic;
                     VersionPartType partType = (VersionPartType)partIndex;
 
                     PropertyInfo? property
-                        = typeof(Version)
-                        .GetProperty(partType.ToString());
-
-                    //? Shall never happen but it is possible if a typo is introduced
-                    if (property == null)
-                        throw new Exception("(BUG!) Version part type name is invalid."
-                            + Environment.NewLine + "If you see this, please contact the developer.");
+                    = typeof(Version).GetProperty(partType.ToString())
+                    ?? throw new Exception(
+                        "(BUG!) Version part type name is invalid."
+                        + Environment.NewLine + "If you see this, please contact the developer."
+                    );
 
                     //? Make int for XYZ
                     if (IsXYZ()) {
