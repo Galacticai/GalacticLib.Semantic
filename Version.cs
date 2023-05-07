@@ -16,13 +16,7 @@ namespace GalacticLib.Semantic;
 /// <summary> Semantic version matching the guidelines in <see href="https://semver.org"/> </summary>
     public class Version {
         /// <summary> Collection of version regex-related things </summary>
-        public record VersionRegex {
-            /// <summary> Check whether a string is a version that follows the semtantic version guidelines </summary>
-            /// <param name="versionString"> Target <see cref="string"/> </param>
-            /// <returns> true if the string matches the <see cref="Complete"/> semtantic version regex </returns>
-            public static bool IsSemantic(string versionString)
-                => Regex.IsMatch(versionString.Trim(), Complete);
-
+    public static class VersionRegex {
             public const string Number
             = "[0-9]";
             public const string AlphanumericDash
@@ -54,8 +48,8 @@ namespace GalacticLib.Semantic;
             Major, Minor, Patch, BuildType, Build
         }
         /// <summary> Collection of preset BuildTypes </summary>
-        public record BuildTypes {
-            public static readonly string
+    public static class BuildTypes {
+        public const string
                 Alpha = "alpha", Beta = "beta",
                 Dev = "dev", Development = "development",
                 Pre = "pre", PreRelease = "pre-release",
