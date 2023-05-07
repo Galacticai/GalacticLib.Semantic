@@ -41,6 +41,13 @@ namespace GalacticLib.Semantic;
             /// <summary> (X.Y.Z-BuildType+Build) </summary> 
             public const string Complete = XYZ + BuildType + Build;
         }
+
+    /// <summary> Check whether a string is a version that follows the semtantic version guidelines </summary>
+    /// <param name="versionString"> Target <see cref="string"/> </param>
+    /// <returns> true if the string matches the <see cref="Complete"/> semtantic version regex </returns>
+    public static bool IsSemantic(string versionString)
+        => Regex.IsMatch(versionString.Trim(), VersionRegex.Complete);
+
         /// <summary> The name of the version part
         /// <br/> Major.Minor.Patch-BuildType+Build </summary>
         public enum VersionPartType {
