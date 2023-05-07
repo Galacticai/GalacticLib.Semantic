@@ -74,7 +74,7 @@ namespace GalacticLib.Semantic;
     /// <summary> Just a different label for <see cref="BuildType"/> </summary>
     public string Prerelease { get => BuildType; set => BuildType = value; }
         /// <summary> Major.Minor.Patch-BuildType+(Build) </summary>
-        public string? Build { get; set; }
+    public string Build { get; set; }
 
 
         /// <summary> Semantic version matching the guidelines in semver.org </summary>
@@ -93,8 +93,9 @@ namespace GalacticLib.Semantic;
                 : this(versionString, false) { }
         /// <summary> Semantic version matching the guidelines in semver.org 
         /// <br/> From a <see cref="string"/> </summary>
-        public Version(string versionString, bool forceSemantic) {
-            if (forceSemantic && !VersionRegex.IsSemantic(versionString))
+    public Version(string versionString, bool forceSemantic)
+            : this() {
+        if (forceSemantic && !IsSemantic(versionString))
                 throw new ArgumentException("The provided version string does not follow the semantic version guidelines");
 
             versionString = versionString.Trim();
