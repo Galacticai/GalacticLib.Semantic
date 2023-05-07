@@ -24,11 +24,11 @@ namespace GalacticLib.Semantic;
                 => Regex.IsMatch(versionString.Trim(), Complete);
 
             public const string Number
-                = @"[0-9]";
+            = "[0-9]";
             public const string AlphanumericDash
-                = @"[0-9A-Za-z-]";
+            = "[0-9A-Za-z-]";
             public const string AlphanumericDashDot
-                = @"[0-9A-Za-z-.]";
+            = "[0-9A-Za-z-.]";
             /// <summary> (X.Y.Z)-BuildType+Build </summary> 
             public const string XYZ
                 = $@"({Number}+)\.({Number}+)\.({Number}+)";
