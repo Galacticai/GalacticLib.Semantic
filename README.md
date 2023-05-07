@@ -2,7 +2,7 @@
 
 
 > <a href="https://github.com/Galacticai/GalacticLib.Semantic/actions/runs/3354750276/jobs/5558514599" >
->     <img height=24 src="https://img.shields.io/github/workflow/status/Galacticai/GalacticLib.Semantic/.NET?label=Build&logo=dotnet" />
+>     <img height=24 src="https://img.shields.io/github/actions/workflow/status/Galacticai/GalacticLib.Semantic/dotnet.yml?label=Build&logo=dotnet" />
 > </a>
 > <br/>
 > <a href="https://nuget.org/packages/GalacticLib.Semantic" >
