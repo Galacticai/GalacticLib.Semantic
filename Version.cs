@@ -164,7 +164,7 @@ namespace GalacticLib.Semantic;
             }
         }
 
-        public Version Parse(string versionString)
+    public static Version Parse(string versionString)
             => new(versionString);
 
         /// <summary> Convert to <see cref="System.Version"/> 
