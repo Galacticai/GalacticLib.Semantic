@@ -204,5 +204,8 @@ namespace GalacticLib.Semantic;
             versionSB.Append('+').Append(Build);
             return versionSB.ToString();
         }
-    }
+
+    public static implicit operator Version(string versionString) => new(versionString, false);
+    public static implicit operator string(Version semanticVersion) => semanticVersion.ToString();
+
 }
