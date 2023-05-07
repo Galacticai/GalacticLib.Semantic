@@ -160,7 +160,7 @@ namespace GalacticLib.Semantic;
         /// <br/> ⚠️ Warning: <see cref="System.Version"/> does not support the <see cref="BuildType"/> and <see cref="Build"/> so they are lost in the conversion process
         /// <br/> Note: <see cref="Version"/> does not support <see cref="System.Version.Revision"/> so it is replaced by 0 </summary>
         /// <returns> Major.Minor.Patch.0 (as <see cref="System.Version"/>) </returns>
-        public virtual System.Version ToVersion()
+    public virtual System.Version ToSystemVersion()
             => new(Major, Minor, Patch, 0);
 
         public override int GetHashCode() {
