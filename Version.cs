@@ -172,6 +172,7 @@ namespace GalacticLib.Semantic;
             code.Add(Build);
             return code.ToHashCode();
         }
+#nullable enable
         public override bool Equals(object? obj) {
             if (obj is not Version other) return false;
             return Major == other.Major
@@ -180,6 +181,7 @@ namespace GalacticLib.Semantic;
                 && BuildType == other.BuildType
                 && Build == other.Build;
         }
+#nullable restore
 
         /// <summary> Convert to <see cref="string"/> </summary>
         /// <returns> "Major.Minor.Patch-BuildType+Build" 
