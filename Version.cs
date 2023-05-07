@@ -104,10 +104,10 @@ namespace GalacticLib.Semantic;
 
             StringBuilder partBuilder = new();
 
-            bool IsXYZ() => (partIndex <= (int)VersionPartType.Patch);
+        bool IsXYZ() => partIndex <= (int)VersionPartType.Patch;
 
             void ApplyPart() {
-                string part = (parts[partIndex] = partBuilder.ToString());
+            string part = parts[partIndex] = partBuilder.ToString();
                 if (!string.IsNullOrEmpty(part)) {
                     VersionPartType partType = (VersionPartType)partIndex;
 
@@ -124,9 +124,7 @@ namespace GalacticLib.Semantic;
                     if (IsXYZ()) {
                         int.TryParse(part, out int partValue);
                         property.SetValue(this, partValue);
-                    }
-                    //? keep as {string?} for BuildType, Build
-                    else property.SetValue(this, part);
+                } else property.SetValue(this, part); //? keep as {string?} for BuildType, Build
                 }
                 partIndex++;
                 partBuilder = new();
