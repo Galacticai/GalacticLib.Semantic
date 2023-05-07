@@ -197,19 +197,11 @@ namespace GalacticLib.Semantic;
         /// <br/> Note: BuildType and Build might not always be present </returns>
         public override string ToString() {
             StringBuilder versionSB = new();
-            versionSB.Append(Major);
-            versionSB.Append('.');
-            versionSB.Append(Minor);
-            versionSB.Append('.');
-            versionSB.Append(Patch);
-            if (!string.IsNullOrEmpty(BuildType)) {
-                versionSB.Append('-');
-                versionSB.Append(BuildType);
-            }
-            if (!string.IsNullOrEmpty(Build)) {
-                versionSB.Append('+');
-                versionSB.Append(Build);
-            }
+        versionSB.Append(Major).Append('.').Append(Minor).Append('.').Append(Patch);
+        if (!string.IsNullOrEmpty(BuildType))
+            versionSB.Append('-').Append(BuildType);
+        if (!string.IsNullOrEmpty(Build))
+            versionSB.Append('+').Append(Build);
             return versionSB.ToString();
         }
     }
